@@ -1,33 +1,90 @@
+htmml, body {
+  height: 100%;
+}
 body {
-  padding: 50px;
+  margin:0;
+  top: 0;
+  padding: 0;  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  width: 100%;
+  background-image: url(https://wallstilldawn.com/background);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 25px;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
-ul {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column-reverse;
-  width: 500px;
+#tweets {
+    height: 100%;
+    display: block;
+    max-height: 80vh;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 50px 0;
+    box-sizing: border-box;
+    width: 600px;
 }
 
-li {
-  flex: 0 0 auto;
+#tweets li {
   list-style: none;
-  padding: 5px 0;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
 }
 
-li p {
-  float: left;
-  width: 431px;
+#tweets li + li {
+  margin: 5px 0 0 0;
 }
 
-li img {
-  float: left;
-  width: 64px;
+#tweets li p {
+  flex: 1;
+}
+
+#tweets li img {
   padding-left: 5px;
+  width: 64px;
+  height: 64px;
 }
 
-.clear {
-  clear: both;
+#sentiments {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 10px;
+  width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
+#sentiments li {
+  background: none;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+#sentiments li img {
+  width: 64px;
+  height: 64px;
+}
+#sentiments li span {
+  border-radius: 14px;
+  padding: 5px;
+  display: block;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+.sentiment_-4 { background-color: rgba(255, 0, 0, 0.50); }
+.sentiment_-2 { background-color: rgba(255, 96, 0, 0.50); }
+.sentiment_-1 { background-color: rgba(255, 178, 0, 0.50); }
+.sentiment_0 { background-color: rgba(255, 255, 0, 0.50); }
+.sentiment_1 { background-color: rgba(214, 255, 0, 0.50); }
+.sentiment_2 { background-color: rgba(155, 255, 0, 0.50); }
+.sentiment_3 { background-color: rgba(96, 255, 0, 0.50); }
+.sentiment_5 { background-color: rgba(50, 255, 0, 0.50); }

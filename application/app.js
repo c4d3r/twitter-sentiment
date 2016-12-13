@@ -60,7 +60,7 @@ app.use((err, req, res, next) => {
 
 // Create Socket.IO service and handle twitter message
 let ss = new SocketService(io);
-twit.stream('statuses/filter', { track: '#awfullybritishchristmas' }, (stream) => {
+twit.stream('statuses/filter', { track: 'christmas' }, (stream) => {
     stream.on('data', (data) => {
         ss.handleTwitterMessage(data);
     });
