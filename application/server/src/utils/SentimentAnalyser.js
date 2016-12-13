@@ -13,5 +13,9 @@ const processor = unified().use(english).use(emoji).use(sentiment);
  */
 exports.analyseMessage = (text) => {
     let tree = processor.run(processor.parse(text));
+    console.log(tree.data);
+    if (tree.data.polarity > 5) { tree.data.polarity = 5; };
+    if (tree.data.polarity < -5) { tree.data.polarity = -5; }; 
+    if (typeof tree.data.polarity == "undefined")  { tree.data.polarity = 0; };
     return tree.data;
 };
