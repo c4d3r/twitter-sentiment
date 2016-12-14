@@ -20,6 +20,7 @@
     "socket.io": "^1.7.1",
     "twitter": "^1.7.0",
     "unified": "^5.1.0",
-    "unist-util-inspect": "^4.0.0"
+    "unist-util-inspect": "^4.0.0",
+    "yargs": "^6.5.0"
   }
 }

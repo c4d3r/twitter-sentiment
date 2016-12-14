@@ -12,10 +12,10 @@ const users = require('./server/src/routes/users');
 const SocketService = require('./server/src/services/SocketService');
 
 const debug = require('debug')('application:server');
-const twitter = require('twitter');
-const twit = new twitter(config.third_party.twitter);
 
-const PORT = 8000;
+const argv = require('yargs').argv;
+
+const PORT = argv.port || argv.p || 3000;
 
 let app = express();
 let http = require('http').createServer(app);
@@ -58,13 +58,9 @@ app.use((err, req, res, next) => {
     res.render('error');
 });
 
+
 // Create Socket.IO service and handle twitter message
 let ss = new SocketService(io);
-twit.stream('statuses/filter', { track: 'christmas' }, (stream) => {
-    stream.on('data', (data) => {
-        ss.handleTwitterMessage(data);
-    });
-});
 
 /**
  * Event listener for HTTP server "error" event.

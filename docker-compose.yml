@@ -1,0 +1,7 @@
+version: '2'
+services:
+    gdt:
+        build: .
+        ports: ["3000:3000"]
+        volumes:
+            - ./application:/app/

@@ -1,3 +1,4 @@
 node_modules/
 .idea/
 .vagrant/
+application/npm-debug.log

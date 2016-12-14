@@ -15,16 +15,32 @@ body {
   max-height: 100vh;
   overflow: hidden;
 }
+#container {
+  margin: 0 auto;
+  width: 600px;
+}
+#keyword {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.19);
+    border: none;
+    font-family: 'Courgette';
+    font-size: 35pt;
+    color: white;
+    text-shadow: 1px 1px red;
+    font-weight: bold;
+}
 
 #tweets {
     height: 100%;
     display: block;
     max-height: 80vh;
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 50px 0;
-    box-sizing: border-box;
-    width: 600px;
+    overflow-y scroll;    
+    padding: 0 0 50px 0;
+    box-sizing: border-box;    
 }
 
 #tweets li {
@@ -88,3 +104,12 @@ body {
 .sentiment_2 { background-color: rgba(155, 255, 0, 0.50); }
 .sentiment_3 { background-color: rgba(96, 255, 0, 0.50); }
 .sentiment_5 { background-color: rgba(50, 255, 0, 0.50); }
+
+#sentimentChart {
+  background: white;
+  width: 500px !important;
+  height: 500px !important;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}

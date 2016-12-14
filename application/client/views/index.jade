@@ -1,32 +1,35 @@
 extends layout
 
 block content
-    ul(id="sentiments")
-        li
-            img(src="images/-4.png")
-            <span id="sentiment_-4" class="sentiment_-4">0</span>
-        li
-            img(src="images/-2.png")
-            <span id="sentiment_-2" class="sentiment_-2">0</span>
-        li
-            img(src="images/-1.png")
-            <span id="sentiment_-1" class="sentiment_-1">0</span>
+    canvas(id="sentimentChart", width="400", height="400")
+    div(id="container")
+        ul(id="sentiments")
+            li
+                img(src="images/-4.png")
+                <span id="sentiment_-4" class="sentiment_-4">0</span>
+            li
+                img(src="images/-2.png")
+                <span id="sentiment_-2" class="sentiment_-2">0</span>
+            li
+                img(src="images/-1.png")
+                <span id="sentiment_-1" class="sentiment_-1">0</span>
+            
+            li
+                img(src="images/0.png")
+                <span id="sentiment_0" class="sentiment_0">0</span>
+            li
+                img(src="images/1.png")
+                <span id="sentiment_1" class="sentiment_1">0</span>
+            li
+                img(src="images/2.png")
+                <span id="sentiment_2" class="sentiment_2">0</span>
+            li
+                img(src="images/3.png")
+                <span id="sentiment_3" class="sentiment_3">0</span>
+            li
+                img(src="images/5.png")
+                <span id="sentiment_5" class="sentiment_5">0</span>     
         
-        li
-            img(src="images/0.png")
-            <span id="sentiment_0" class="sentiment_0">0</span>
-        li
-            img(src="images/1.png")
-            <span id="sentiment_1" class="sentiment_1">0</span>
-        li
-            img(src="images/2.png")
-            <span id="sentiment_2" class="sentiment_2">0</span>
-        li
-            img(src="images/3.png")
-            <span id="sentiment_3" class="sentiment_3">0</span>
-        li
-            img(src="images/5.png")
-            <span id="sentiment_5" class="sentiment_5">0</span>            
-    ul(id='tweets')
-
-
+        input(type="text", id="keyword", value="Christmas")       
+        ul(id='tweets')
+    
