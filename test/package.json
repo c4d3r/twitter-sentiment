@@ -2,5 +2,14 @@
   "name": "groep-01-test",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "code": "^4.0.0",
+    "lab": "^11.2.1",
+    "sinon": "^1.17.6"
+  },
+  "scripts": {
+    "test": "lab -a code -t 95 -c -L -I __core-js_shared__",
+    "test-cov-html": "lab -a code -r html -o coverage.html -I '__core-js_shared__'"
+  }
 }
