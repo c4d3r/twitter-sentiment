@@ -1,5 +1,3 @@
-'use strict';
-
 // Load modules
 const Code = require('code');
 const Lab = require('lab');
@@ -14,7 +12,7 @@ const beforeEach = lab.beforeEach;
 const after = lab.after;
 const expect = Code.expect;
 
-describe('Test', () => {
+describe('Server', () => {
     let server;
 
     beforeEach((done) => {

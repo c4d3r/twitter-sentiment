@@ -39,7 +39,8 @@ class SocketService {
                 let tweet = {
                     message: data.text,
                     profile_img: data.user.profile_image_url
-                }                    
+                };
+
                 socket.emit('data', {
                     tweet: tweet,
                     sentiment: sentiment

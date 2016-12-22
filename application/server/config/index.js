@@ -13,6 +13,6 @@ if (allowed.indexOf(nodeEnv) === -1) {
 }
 
 // Set environment
-config = require(process.cwd() + '/server/config/app_' + (processArg || nodeEnv || defaultEnv));
+config = require('./app_' + (processArg || nodeEnv || defaultEnv));
 
 module.exports = config;
