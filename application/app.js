@@ -8,7 +8,6 @@ const bodyParser = require('body-parser');
 const config = require('./server/config');
 
 const index = require('./server/src/routes/index');
-const users = require('./server/src/routes/users');
 const SocketService = require('./server/src/services/SocketService');
 
 const debug = require('debug')('application:server');
@@ -38,7 +37,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/public')));
 
 app.use('/', index);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

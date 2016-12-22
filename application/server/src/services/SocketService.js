@@ -38,7 +38,7 @@ class SocketService {
                 let sentiment = SentimentAnalyser.analyseMessage(data.text);
                 let tweet = {
                     message: data.text,
-                    profile_img: data.user.profile_image_url
+                    profile_img: (data.user) ? data.user.profile_image_url : ""
                 };
 
                 socket.emit('data', {
