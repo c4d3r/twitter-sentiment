@@ -1,6 +1,7 @@
 const SentimentAnalyser = require('../utils/SentimentAnalyser');
 
-const config = require('../../config');
+const Path = require('path');
+const config = require(Path.join(__dirname, '../../config'));
 
 const twitter = require('twitter');
 const twit = new twitter(config.third_party.twitter);
