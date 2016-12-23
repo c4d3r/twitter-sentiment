@@ -1,9 +1,9 @@
 FROM node:7
 
-ADD ./application/package.json /app/
+ADD package.json /app/
 RUN npm install
 
-ADD ./application /app/
+ADD . /app/
 
 EXPOSE 3000
 WORKDIR /app
