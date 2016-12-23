@@ -14,9 +14,9 @@ class SocketService {
         io.on('connection', (socket) => {
 
             // client joined
-            console.log("Client joined!");            
+            console.log("Client joined!");
 
-            let keyword = 'christmas';                        
+            let keyword = 'christmas';
             this.twitStream(socket, keyword);
 
             // keyword changes
@@ -24,17 +24,17 @@ class SocketService {
                 console.log('changing keyword!');
                 this.twitStream(socket, word);
             });
-            
 
-            this.sockets.push(socket);               
-        });        
+
+            this.sockets.push(socket);
+        });
     }
-    
+
     twitStream(socket, keyword) {
         twit.stream('statuses/filter', { track: keyword }, (stream) => {
-            stream.on('data', (data) => {  
+            stream.on('data', (data) => {
 
-                if(!socket.connected) return;
+                if (!socket.connected) return;
 
                 let sentiment = SentimentAnalyser.analyseMessage(data.text);
                 let tweet = {
@@ -56,12 +56,12 @@ class SocketService {
             });
             socket.on('change-keyword', (word) => {
                 stream.destroy();
-            });                
+            });
         });
     }
 
     // Incoming twitter message that we should handle
-    handleTwitterMessage (message) {        
+    handleTwitterMessage(message) {
         let sentiment = SentimentAnalyser.analyseMessage(message);
         this.sendMessageToAll('data', {
             message: message,

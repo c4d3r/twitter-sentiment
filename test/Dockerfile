@@ -1,4 +1,13 @@
-FROM node:7.2.1
+FROM node:7
 
-# Expose Express (3000) and Socket.IO (1337)
+ADD package.json /app/package.json
+WORKDIR /app
+
+RUN npm install
+
+ADD . /app
+
 EXPOSE [ 3000, 1337 ]
+
+
+CMD ["npm", "run", "test"]
