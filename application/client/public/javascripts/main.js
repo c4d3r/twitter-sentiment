@@ -124,7 +124,7 @@ var init = () => {
         chart.update();        
     }
 
-    var socket = io('http://localhost:3000');
+    var socket = io('http://localhost:' + document.SOCKET_PORT);
     keyword.onchange = (event) => {
         if(!socket.connected) {
             alert("No connection!");

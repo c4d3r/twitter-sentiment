@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./app"
+    "dev": "node ./app dev",
+    "start": "node ./app prod --port=3000"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
