@@ -11,13 +11,18 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  padding: 25px;
   max-height: 100vh;
   overflow: hidden;
 }
 #container {
-  margin: 0 auto;
-  width: 600px;
+    margin: 0 auto;
+    width: 600px;
+    max-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
 }
 #keyword {
     width: 100%;
@@ -40,7 +45,8 @@ body {
     max-height: 80vh;
     overflow-y scroll;    
     padding: 0 0 50px 0;
-    box-sizing: border-box;    
+    box-sizing: border-box;   
+    overflow-y: scroll; 
 }
 
 #tweets li {
@@ -75,9 +81,10 @@ body {
   justify-content: space-around;
   background: rgba(255, 255, 255, 0.65);
   padding: 10px;
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  min-height: 114px;
 }
 #sentiments li {
   background: none;
